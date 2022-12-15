@@ -1,0 +1,653 @@
+
+/* inside :root you will find all the fixed parameters for the website, which can be used as variables later inside code */
+:root{
+
+    /* colors section */
+    --transparent: rgba(0,0,0,0);
+    --black: black;
+    --color2:#F87D34;
+    --red: rgb(248, 49, 49);
+    --green: rgb(114, 248, 114);
+    --font-color: white;
+    --color1: blue;
+    --graident:linear-gradient(90deg, #F7F7F7 0%, #DAB574 19.62%, #F3A42D 43.58%, #F87D34 66.49%, #EC835F 83.16%, #D1A49A 100%);
+    --sec4-logo-bg: #303030;
+    --gradient2: linear-gradient(165deg,#f7f7f7 30%,#dab574 0,#f3a42d 43.58%,#f87d34 66.49%,#ec835f 83.16%,#d1a49a);
+    --brand1_bg:#49413f;
+    --brand2_bg:#24503F;
+    --brand3_bg:#1b1b1b;
+    --brand4_bg:#fec530;
+    --brand5_bg: white;
+    --brand6_bg:#1f212d;
+
+
+
+    /* font section */
+    --font-family: 'Urbanist', sans-serif;
+    --height-for-1920-screen: 960px;
+    --standard-font-size: 24px; 
+
+    
+    /* image section */
+    --logo: url("img/icon.png");
+    --index-section-1st-background: url("img/slider_background.png");
+    --index-buy-image: url("img/index_section1_1.png");
+    --index-sell-image: url("img/index_section1_2.png");
+    --index-section-image3: url("img/index_section1_3.png");
+    --index-section2-img: url("img/section2_img.png");
+    --index-section3-img1:url("img/sec3_img1.png");
+    --index-section3-img2:url("img/sec3_img2.png");
+    --index-section3-img4:url("img/sec3_img4.png");
+    --index-section4-img1: url("img/available_brands_logo.png");
+    --index-section5-img1:url("img/footer_img.png");
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font-family);
+    color: var(--font-color); 
+}
+
+html{
+    font-size: var(--standard-font-size);
+    max-width: 1920px;
+}
+
+body{
+    background: var(--black);
+    width: 1920px;
+    
+}
+
+
+span{
+    display: inline-block;
+}
+
+
+                            /*   This section deals with the css styling of Header section */
+
+header{
+    position: absolute;
+    position: -webkit-sticky;
+    top:0px;
+    left: 10%;
+    z-index: 1;
+    margin: auto;
+    height: 100px;
+    width: 80%;
+    background: var(--black);
+    overflow: hidden;
+    max-width: 1920px;
+    /*background-color: var(--color1); */
+}
+
+.icon{
+    display: inline-block;
+    padding: 45px 0px;
+   /* background-color: var(--red); */
+    float: left;
+}
+
+.menu{
+    display: inline-block;
+    /*background: var(--green);*/
+    float: right;
+}
+
+.button{
+    display: inline-block;
+    padding:45px 45px;
+    font-size: 1rem;
+   /* background-color: aquamarine; */
+}
+
+.menu span:last-child{
+    padding-right: 0px;
+}
+
+
+
+
+
+
+                                    /* Css for section1 of index.html starts here */
+
+.index_section1{
+    width: 80%;
+    height:var(--height-for-1920-screen);
+    position: relative;
+    margin: auto;
+    z-index: 0;
+    background: var(--index-section-1st-background) no-repeat center;
+    background-position-x: right;
+    background-position-y: 13rem;
+    overflow: hidden;
+    max-width: 1920px;
+}
+
+.index_section1_heading{
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bolder;
+    height: 20vh;
+    background-color: rgba(0,0,0,0);
+}
+
+.buy_add_wrapper{
+    height:100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.buy_add_wrapper::after{
+    content: var(--index-section-image3);
+    position: relative;
+    transform: translate(45vw, 0vh);
+}
+
+.add::before{
+    content: var(--index-buy-image);
+    position: absolute;
+    transform: translate(-15vw, -10vh);
+}
+
+.add{
+    transform: translate(32vw, 10vh);
+    background-color: rgba(0,0,0,0);
+    font-size: 1rem;
+    font-weight: bolder;
+    padding-left: 0px;
+    z-index: 5;
+}
+
+.buy{
+    transform: translate(38vw, 10vh);
+    background: rgba(0,0,0,0);
+    font-size: 1rem;
+    font-weight: bolder;
+    z-index: 5;
+    box-sizing: border-box;
+    border-radius: 100%;
+}
+
+.buy::after{
+    content: var(--index-sell-image);
+    position: absolute;
+    transform: translate(5vw, -12vh);
+}
+
+.coursor_pointer {
+    cursor: pointer;
+} 
+
+.sliding_ball{
+    height: 10rem; 
+    width: 10rem;
+    background:var(--graident);
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 100%;
+    z-index: 3;
+    left: 28vw;
+    top: 47vh;
+    transition: transform 1.2s ease-in-out;
+}
+
+
+
+
+
+ /* css styling for section2 of index.html will start hereafter */
+
+
+
+
+
+
+.index_section2{
+    height: calc(var(--height-for-1920-screen)/1.5);
+    width: 80vw;
+    /* background: red; */
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 7rem;
+    margin: auto;
+    padding-left: 100px;
+    max-width: 1920px;
+}
+
+.section2_img_holder{
+    height: 50vh;
+    width: 35vw;
+    margin: auto;
+    margin-right: 0px;
+    background: var(--index-section2-img) no-repeat center;
+    background-size: contain;
+    background-position-x: 50%;
+    float: left;
+}
+
+.section2_text_holder{
+    height: 40vh;
+    width: 25vw;
+    margin: auto;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+                               
+
+/* Css for section3 of index.html will start herafter */
+
+
+
+
+
+.index_section3{
+    width: 80vw;
+    height:calc(var(--height-for-1920-screen)/1.5);
+    margin: auto;
+    padding-top: 7rem;
+    max-width: 1920px;
+}                                
+
+.cards{
+    width: 80vw;
+    height:calc(var(--height-for-1920-screen)/1.5);
+    margin: auto; 
+    box-sizing: border-box;
+    padding: 4vw 0vw 0vw 12vw;
+}
+
+.section3_card1{
+    height: 170px;
+    width: 500px;
+    float: left;
+    /* background: red; */
+}
+
+.section3_card2{
+    height: 170px;
+    width: 500px;
+    float: left;
+    padding-left: 100px;
+    /* background: red; */
+}
+
+.section3_card3{
+    padding-top:120px;
+    height: 170px;
+    width: 500px;
+    float: left;
+    /* background: red; */
+}
+
+.section3_card4{
+    padding-top: 120px;
+    height: 170px;
+    width: 500px;
+    float: left;
+    padding-left: 100px;
+    /* background: red; */
+}
+
+.card_image{
+    height:100%;
+    width: 150px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    float: left;
+}
+
+.card_text{
+    height: 100%;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    float:right;
+    word-wrap: break-word;
+}
+
+.card_text .card_heading{
+    font-weight: bolder;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.card_text .card_details{
+    font-size: 0.7rem;
+}
+
+
+                        /* Css for section4 of index.html will start herafter */
+
+.index_section4{
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    transform: translateY(50px);
+    margin-bottom: 150px;
+    max-width: 1920px;
+}
+
+.section4_heading{
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.heading_text{
+    background-color: rgba(0,0,0,0);
+}
+
+.heading_text .first_part{
+    font-weight: bolder;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:#acacac;
+    color: black;
+}
+
+.heading_text .second_part{
+    -webkit-text-fill-color: rgba(0,0,0,0);
+    background: var(--graident);
+    background-clip: text;
+}
+
+.heading_img img{
+    background: rgba(0,0,0,0);
+    width: 300px;
+}
+
+.section4_boby {
+    width: 70vw;
+    height: 70vh;
+    background: var(--sec4-logo-bg);
+    border-radius: 30px;
+    overflow:hidden;
+    transform: translateY(50px);
+}
+
+.avail_brand_logo{
+    width: 50%;
+    height: 100%;
+    background-color: var(--sec4-logo-bg);
+    padding: 0vh 0vh ;
+    text-align: center;
+    float: left;
+}
+
+.avail_brand_logo img{
+    height: 85%;
+    padding-top: 5%;
+}
+
+.sec4_text{
+    background-color: #171818;
+    height:100%;
+    width:50%;
+    float:left;
+    font-size: 51px;
+    padding: 15% 10% 0px 5%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: left;
+}
+
+.sec4_text .colored_text{
+    width: 350px;
+    background: var(--gradient2);
+    -webkit-text-fill-color: var(--transparent);
+    background-clip: text;
+}
+
+
+
+
+
+/* Css for section5 of index.html will start hereafter */
+@keyframes slider{
+    0%{
+        transform: translateX(0px);
+    }
+    18%{
+        transform: translateX(-700px);
+    }
+    20%{
+        transform: translateX(-700px);
+    }
+    38%{
+        transform: translateX(-1400px);
+    }
+    40%{
+        transform: translateX(-1400px);
+    }
+    58%{
+        transform: translateX(-2000px);
+    }
+    60%{
+        transform: translateX(-2000px);
+    }
+    78%{
+        transform: translateX(-2700px);
+    }
+    80%{
+        transform: translateX(-2700px);
+    }
+    90%{
+        transform: translateX(0px);
+    }
+}
+
+.slider_heading{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    max-width: 1920px;
+}
+
+.index_slider{
+    width: 1920px;
+    height: 600px;
+    overflow: hidden;
+    overflow-x: scroll;
+    max-width: 1920px;
+}
+
+.slider_cont{
+    height: 100%;
+    width: 4000px;
+    padding-top: 100px;
+    animation: slider 10s ease-in-out infinite;
+}
+
+.slider_cont div{
+    height: 350px;
+    width: 550px;
+    margin-left: 100px;
+    float: left;
+    box-sizing: border-box;
+    border-radius: 30px;
+    text-align: center;
+    background:#303030;
+    display: flex;
+    align-items: center;
+}
+
+.slider_cont div img{
+    margin: auto;
+    width: 350px;
+}
+
+.slider_cont .slider_img1{
+    background:var(--brand1_bg);
+}
+
+.slider_cont .slider_img2{
+    background:var(--brand2_bg);
+}
+
+.slider_cont .slider_img3{
+    background:var(--brand3_bg);
+}
+
+.slider_cont .slider_img4{
+    background:var(--brand4_bg);
+}
+
+.slider_cont .slider_img5{
+    background:var(--brand5_bg);
+}
+
+.slider_cont .slider_img6{
+    background:var(--brand6_bg);
+}
+
+.slider_bullet{
+    height: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.slider_bullet .bullet {
+    height: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: 1px solid white;
+    position: relative;
+    transform: translateY(-130px);
+}
+
+
+
+
+/* css for footer in index.html will start hereafter */
+
+
+.section5 {
+    display: flex;
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--index-section5-img1) no-repeat center center/cover;
+    max-width: 1920px;
+  }
+  
+  .section5 a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .section5 .part1 {
+    display: flex;
+    flex-direction: column;
+    height: 32vh;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 50px;
+  }
+  
+  .section5 .part1 .para {
+    width: 510px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-size: 0.6rem;
+    font-weight: bolder;
+  }
+  .section5 .waitlist form {
+    display: flex;
+  }
+  
+  .section5 .join {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--graident);
+    box-shadow: 0px 4px 50px 10px rgba(249, 144, 53, 0.2);
+    color: black;
+    font-size: 16px;
+    margin-left: -20px;
+    z-index: 2;
+  }
+
+.section5 .part1 .waitlist .join input{
+    all:unset;
+  }
+
+.section5 .part1 .logo img{
+    height: 30px;
+}
+
+  .section5 .waitlist input {
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    border-radius: 8px;
+    transform: translateX(-15px);
+    background: #222222;
+    color: #ababab;
+    padding: 12px 21px;
+  }
+
+  .section5 .waitlist .email input{
+    background: #49413f;
+  }
+  
+::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+:-moz-placeholder {
+    text-align: center;
+  }
+  
+  .section5 .part2 {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .section5 .part2 .links {
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    place-items: flex-end;
+  }
+  
+  .section5 .social_media {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
